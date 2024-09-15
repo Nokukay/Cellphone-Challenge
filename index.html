@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Phone Challenge</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        transition: background-color 1s ease; /* Smooth transition for background color */
+      }
+
+      h1 {
+        font-size: 90px;
+        color: white;
+        font-weight: bolder;
+        background: rgba(226, 235, 244, 0.3);
+        max-width: 700px;
+        padding: 30px 15px;
+        border-radius: 8px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .slogan {
+        font-size: 20px;
+      }
+
+      main {
+        background: rgba(226, 235, 244, 0.6);
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 5px;
+      }
+
+      .button {
+        display: block;
+        margin: 50px auto; /* Center the button horizontally */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        max-width: 130px;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .fyi {
+        font-weight: bolder;
+        font-size: 20px;
+        transition: 150ms ease-in-out;
+      }
+      .fyi:hover {
+        cursor: pointer;
+        color: white;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="https://on.soundcloud.com/DCRTFKCzGUkcxmsu5"
+      class="button"
+      onclick="playRingtone()"
+      >Play Ringtone</a
+    >
+    <audio
+      id="ringtone"
+      src="https://www.zedge.net/ringtones/bf8db123-f81c-434a-bc9c-7791f78cbee5"
+    ></audio>
+    <header>
+      <img
+        src="https://cdnb.artstation.com/p/assets/images/images/060/998/111/original/jared-lankford-bluenormal.gif?1679783097"
+        alt="A visually dynamic animated background with abstract patterns"
+      />
+    </header>
+
+    <h1>
+      Nokia 3310
+      <div class="slogan">The Iconic Mobile Phone</div>
+    </h1>
+
+    <main>
+      <ul>
+        <li>📱 133g, 22mm thickness</li>
+        <li>🔋 Removable NiMH 900 mAh battery (BMC-3)</li>
+        <li>💾 Mini-SIM</li>
+        <li>📱 Messaging-SMS</li>
+        <li>🎮 Games: Snake II, Pairs II, Space Impact, Bantumi</li>
+      </ul>
+      <a href="https://en.wikipedia.org/wiki/Nokia_3310" class="fyi"
+        >Know more</a
+      >
+    </main>
+
+    <img
+      src="https://ithon.hu/wp-content/uploads/2020/09/Nokia-3310-colorsjpg.jpg"
+      alt="Nokia 3310 colors"
+      class="image2"
+    />
+
+    <footer>
+      This project was coded with 💙 by
+      <a
+        href="https://www.shecodes.io/graduates/135865-nokukhanya-khumalo"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Nokukhanya Khumalo</a
+      >
+    </footer>
+
+    <script>
+      // Array of background colors
+      const colors = ["#E84A5F", "#FDBC5D", "#84B9EF", "#FF96C0", "#7E4FF0"];
+
+      let currentIndex = 0;
+
+      function changeBackgroundColor() {
+        document.body.style.backgroundColor = colors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length; // Cycle through colors
+      }
+
+      // Change background color every 3 seconds (3000 milliseconds)
+      setInterval(changeBackgroundColor, 3000);
+
+      // Set initial background color
+      changeBackgroundColor();
+
+      function playRingtone() {
+        const ringtone = document.getElementById("ringtone");
+        ringtone.play();
+      }
+    </script>
+  </body>
+</html>
